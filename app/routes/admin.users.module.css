@@ -1,0 +1,235 @@
+.container {
+  max-width: 1400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.subtitle {
+  font-size: var(--font-size-3);
+  color: var(--color-neutral-11);
+  margin: 0;
+}
+
+.successMessage {
+  padding: var(--space-4);
+  background: var(--color-success-3);
+  color: var(--color-success-11);
+  border-radius: var(--radius-3);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) 0;
+  max-width: 500px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.field label {
+  font-weight: var(--font-weight-6);
+  color: var(--color-neutral-12);
+  font-size: var(--font-size-3);
+}
+
+.roleDesc {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  margin-top: var(--space-1);
+}
+
+.error {
+  color: var(--color-error-11);
+  font-size: var(--font-size-2);
+  padding: var(--space-3);
+  background: var(--color-error-3);
+  border-radius: var(--radius-2);
+}
+
+.submitBtn {
+  margin-top: var(--space-3);
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  font-weight: var(--font-weight-6);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-3);
+}
+
+.submitBtn:hover {
+  background: var(--color-accent-10);
+}
+
+.usersTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1.5fr;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+  border-bottom: 1px solid var(--color-neutral-6);
+}
+
+.userRow {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1.5fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  align-items: center;
+  border-bottom: 1px solid var(--color-neutral-4);
+  transition: background-color 0.2s;
+}
+
+.userRow:hover {
+  background-color: var(--color-neutral-2);
+}
+
+.userEmail {
+  font-weight: var(--font-weight-5);
+  color: var(--color-neutral-12);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.youBadge {
+  font-size: var(--font-size-1);
+}
+
+.userRole,
+.userStatus,
+.userCreated {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+}
+
+.userActions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+.inlineForm {
+  display: inline;
+}
+
+.roleSelect {
+  min-width: 150px;
+}
+
+.deleteBtn {
+  color: var(--color-error-11);
+}
+
+.deleteBtn:hover {
+  background-color: var(--color-error-3);
+}
+
+.permissionsCard {
+  margin-top: var(--space-6);
+}
+
+.permissionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.permissionCard {
+  padding: var(--space-5);
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-3);
+}
+
+.permissionTitle {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-6);
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-2) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.permissionDesc {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.permissionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.permissionList li {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+}
+
+@media (max-width: 1024px) {
+  .tableHeader,
+  .userRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .userRow {
+    padding: var(--space-4);
+    border: 1px solid var(--color-neutral-6);
+    border-radius: var(--radius-3);
+  }
+
+  .userRow > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .userRow > div::before {
+    content: attr(data-label);
+    font-weight: var(--font-weight-6);
+    color: var(--color-neutral-11);
+  }
+
+  .userActions {
+    justify-content: flex-start;
+  }
+}

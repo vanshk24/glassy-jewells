@@ -1,0 +1,18 @@
+.priceDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.originalPrice {
+  color: var(--color-neutral-9);
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+
+.finalPrice {
+  color: var(--color-accent-11);
+  font-weight: 600;
+  font-size: 1.125rem;
+}

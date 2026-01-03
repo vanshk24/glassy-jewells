@@ -1,0 +1,55 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--color-neutral-2);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.error {
+  color: var(--color-error-11);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.demoCredentials {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  background: var(--color-accent-3);
+  border-radius: var(--radius-2);
+  font-size: 0.875rem;
+}
+
+.demoTitle {
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-accent-11);
+}
+
+.demoCredentials p {
+  margin: var(--space-1) 0;
+  color: var(--color-neutral-11);
+}

@@ -1,0 +1,132 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-neutral-2);
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--color-neutral-1);
+  border-right: 1px solid var(--color-neutral-6);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.sidebarHeader {
+  padding: var(--space-6) var(--space-5);
+  border-bottom: 1px solid var(--color-neutral-6);
+}
+
+.sidebarTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.sidebarRole {
+  font-size: 0.875rem;
+  color: var(--color-neutral-11);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.nav {
+  flex: 1;
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  overflow-y: auto;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-2);
+  color: var(--color-neutral-11);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.navLink:hover {
+  background: var(--color-neutral-3);
+  color: var(--color-neutral-12);
+}
+
+.navLink.active {
+  background: var(--color-accent-3);
+  color: var(--color-accent-11);
+}
+
+.navLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebarFooter {
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-neutral-6);
+}
+
+.userInfo {
+  margin-bottom: var(--space-3);
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  color: var(--color-neutral-11);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logoutBtn {
+  width: 100%;
+  justify-content: flex-start;
+  gap: var(--space-3);
+}
+
+.main {
+  flex: 1;
+  margin-left: 260px;
+  padding: var(--space-6);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-neutral-6);
+  }
+
+  .main {
+    margin-left: 0;
+    padding: var(--space-4);
+  }
+
+  .nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .navLink span {
+    display: none;
+  }
+
+  .logoutBtn span {
+    display: none;
+  }
+}
